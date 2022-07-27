@@ -57,9 +57,11 @@ namespace LoggingKata
             foreach (var locA in locations)
             {
                 var corA = new GeoCoordinate(locA.Location.Latitude, locA.Location.Longitude);
+
                 foreach (var locB in locations)
                 {
                     var corB = new GeoCoordinate(locB.Location.Latitude, locB.Location.Longitude);
+
                     if (distance < corA.GetDistanceTo(corB))
                     {
                         distance = corA.GetDistanceTo(corB);
@@ -71,10 +73,10 @@ namespace LoggingKata
 
             var distances = distance * 0.0006213712;
 
-            Console.WriteLine($"The distance between the two furthest apart stores is {Math.Round(distances, 2)} miles.\n" +
-                              $"StoreA is {TrackA.Name}\n" +
-                              $"StoreB is {TrackB.Name}\n" +
-                              $"These two stores are furthest apart");
+            Console.WriteLine($"The two furthest TacoBells from each other are {TrackA.Name} and {TrackB.Name}.\n" +
+                             $"These two stores are {Math.Round(distances, 2)} miles apart from each other\n");
+
+
         }
     }
 }
