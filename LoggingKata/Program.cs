@@ -73,7 +73,8 @@ namespace LoggingKata
 
             Console.WriteLine($"The distance between the two furthest apart stores is {Math.Round(distances, 2)} miles.\n" +
                               $"StoreA is {TrackA.Name}\n" +
-                              $"StoreB is {TrackB.Name}");
+                              $"StoreB is {TrackB.Name}\n" +
+                              $"These two stores are furthest apart");
         }
     }
 }
